@@ -1,0 +1,83 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+
+# Email notifications
+notify:
+  - name: "outlook_notification"
+    platform: smtp
+    server: "smtp-mail.outlook.com"
+    port: 587
+    timeout: 60
+    sender: !secret outlook_address
+    encryption: starttls
+    username: !secret outlook_address
+    password: !secret outlook_app_password
+    recipient:
+      - "andreidinu408@yahoo.com"
+    debug: true
+
+
+# Process the MQTT sensor data
+mqtt:
+  sensor:
+    - name: "ESP Temperature 1"
+      state_topic: "/sensor_ESP-1/TEMP"
+      unit_of_measurement: "°C"
+      device_class: "temperature"
+      unique_id: "esp_temp_sensor_01"
+
+    - name: "ESP Humidity 1"
+      state_topic: "/sensor_ESP-1/HUM"
+      unit_of_measurement: "%"
+      device_class: "humidity"
+      unique_id: "esp_humidity_sensor_01"
+
+    - name: "ESP Pressure 1"
+      state_topic: "/sensor_ESP-1/PRES"
+      unit_of_measurement: "hPa"
+      device_class: "pressure"
+      unique_id: "esp_pressure_sensor_01"
+
+    - name: "ESP Temperature 2"
+      state_topic: "/sensor_ESP-2/TEMP"
+      unit_of_measurement: "°C"
+      device_class: "temperature"
+      unique_id: "esp_temp_sensor_02"
+
+    - name: "ESP Humidity 2"
+      state_topic: "/sensor_ESP-2/HUM"
+      unit_of_measurement: "%"
+      device_class: "humidity"
+      unique_id: "esp_humidity_sensor_02"
+
+    - name: "ESP Pressure 2"
+      state_topic: "/sensor_ESP-2/PRES"
+      unit_of_measurement: "hPa"
+      device_class: "pressure"
+      unique_id: "esp_pressure_sensor_02"
+
+    - name: "ESP Temperature 3"
+      state_topic: "/sensor_ESP-3/TEMP"
+      unit_of_measurement: "°C"
+      device_class: "temperature"
+      unique_id: "esp_temp_sensor_03"
+
+    - name: "ESP Humidity 3"
+      state_topic: "/sensor_ESP-3/HUM"
+      unit_of_measurement: "%"
+      device_class: "humidity"
+      unique_id: "esp_humidity_sensor_03"
+
+    - name: "ESP Pressure 3"
+      state_topic: "/sensor_ESP-3/PRES"
+      unit_of_measurement: "hPa"
+      device_class: "pressure"
+      unique_id: "esp_pressure_sensor_03"

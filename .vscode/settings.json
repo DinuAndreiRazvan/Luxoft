@@ -1,0 +1,20 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.adapterTargetName": "esp32",
+    "idf.espIdfPath": "/opt/esp/idf",
+    "idf.openOcdConfigs": [
+        "board/esp32-wrover-kit-3.3v.cfg"
+    ],
+    "idf.port": "/dev/ttyUSB0",
+	"idf.pythonBinPath": "/opt/esp/python_env/idf5.4_py3.12_env/bin/python",
+	"idf.toolsPath": "/opt/esp",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "ethernet_init.h": "c",
+        "freertos.h": "c",
+        "task_sensors.h": "c",
+        "wifi.h": "c",
+        "netdb.h": "c"
+    },
+    "idf.gitPath": "git"
+}
