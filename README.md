@@ -65,6 +65,10 @@ Build environment can be run on Windows using WSL2. Tested on Windows 10.
 
 ![ESP32-POE-ISO GPIO Pinout](images/ESP32-POE-ISO-GPIO.png)
 
+## Software
+![Diagram_drawio_dark](images/Untitled Diagram_drawio_dark.png)
+
+
 ### Current Limitations
 
 *   ⚠️ OTA functionality not working in the WIFI Backup mode, only with Ethernet connectivity.
